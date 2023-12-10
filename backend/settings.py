@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-45mjj$02fsbgnt0z#4^+x2=3&w%y92=aa111w8+1$p2y3!3f4p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -141,7 +141,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 STATICFILES_DIRS = (os.path.join(BASE_DIR,'STATIC'),)
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
