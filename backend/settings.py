@@ -93,15 +93,18 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'adtproject',
+#         'USER': 'root',
+#         'PASSWORD': 'root',
+#         'HOST': 'localhost',  # Use 'localhost' if the database is on the same machine
+#         'PORT': '3306',  # Default MySQL port is 3306
+#     }
+# }
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'adtproject',
-        'USER': 'root',
-        'PASSWORD': 'root',
-        'HOST': 'localhost',  # Use 'localhost' if the database is on the same machine
-        'PORT': '3306',  # Default MySQL port is 3306
-    }
+    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
 }
 
 # Password validation
