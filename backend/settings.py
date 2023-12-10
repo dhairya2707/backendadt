@@ -104,8 +104,18 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 #     }
 # }
 DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'x4coxip24ydq61w9',
+        'USER': 'jr6v6wydyjlhx4aq',
+        'PASSWORD': 'h3cg0jnhc6x4joh0',
+        'HOST': 'x71wqc4m22j8e3ql.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',  # Use 'localhost' if the database is on the same machine
+        'PORT': '3306',  # Default MySQL port is 3306
+    }
 }
+# DATABASES = {
+#     'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
